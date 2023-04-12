@@ -10,7 +10,7 @@ CREATE TABLE mobile_phones (
   product_count_phone INT NOT NULL,
   prise_phone INT NOT NULL);
 
-insert into mobile_phones (product_name_phone, manufacturer_phone, product_count_phone, prise_phone) value 
+insert into mobile_phones (product_name_phone, manufacturer_phone, product_count_phone, prise_phone) value
 ('iPhone X', 'Apple', 3, 76000),
 ('iPhone', 'Apple', 2, 51000),
 ('Galaxy S9', 'Samsung', 2, 56000),
@@ -19,17 +19,17 @@ insert into mobile_phones (product_name_phone, manufacturer_phone, product_count
 
 -- 2. Выведите название, производителя и цену для товаров, количество которых превышает 2
 select product_name_phone, prise_phone
-from mobile_phones 
+from mobile_phones
 where product_count_phone > 2;
 
 -- 3. Выведите весь ассортимент товаров марки “Samsung”
-SELECT *  
-from mobile_phones 
+SELECT *
+from mobile_phones
 where manufacturer_phone = 'Samsung';
 
 -- 4. Выведите информацию о телефонах, где суммарный чек больше 100 000 и меньше 145 000**
-SELECT * 
-from mobile_phones 
+SELECT *
+from mobile_phones
 where product_count_phone * prise_phone > 100000 and product_count_phone * prise_phone < 145000;
 
 
@@ -38,7 +38,7 @@ where product_count_phone * prise_phone > 100000 and product_count_phone * prise
 	5.2. "Galaxy"
 	5.3.  Товары, в которых есть ЦИФРЫ
 	5.4.  Товары, в которых есть ЦИФРА "8" */
-    
+
 SELECT * from mobile_phones
 where product_name_phone LIKE '%iPhone%';
 
